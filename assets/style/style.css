@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: SpaceGBold;
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
+}
+
+body {
+    font-family: SpaceGBold;
+    font-size: 18px;
+}
+
+:root {
+    --white: hsl(0deg, 0%, 100%);
+}
+
+.cards {
+    color: var(--white);
+}
+
+.xss {
+    z-index: 1;
+}
+
+.cards>div>div {
+    position: relative;
+}
+
+.cards>div>div>img {
+    width: 24.83rem;
+    box-shadow: 47px 36px 47px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* .cards>div>div:first-child>div {
+    background: #000;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+/* the two divs 
+ the two images 
+ the whole first div 
+ the front card image div
+*/
+/*
+
+
+.cards>div>div:last-child {
+    position: absolute;
+    top: 120%;
+}
+
+.cards>div>div:last-child>div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    right: 3rem;
+    color: hsl(0deg, 0%, 100%);
+    font-size: 0.8rem;
+    letter-spacing: 1.2px;
+    top: -5px;
+}
+
+  */
+
+
+/* flex absolute justify-center top-0 right-0 h-[100vh] */
+
+.form_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 6rem; */
+    background: mediumaquamarine;
+}
+
+/*
+.form_div .card-form {
+    width: 26.5vw;
+}
+
+.form_div .card-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_div .card-form form label {
+    font-size: 0.7rem;
+    padding-bottom: 0.6rem;
+    color: #220930;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.form_div .card-form form input {
+    border: 1px solid hsl(270deg, 3%, 87%);
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+
+}
+
+.form_div .card-form form input:hover,
+.form_div .card-form form input:focus-visible {
+    outline: none;
+    background: linear-gradient(white, white) padding-box, linear-gradient(160deg, rgb(100, 72, 254) 0%, rgb(96, 5, 148) 100%) border-box;
+    border: 1px solid transparent;
+}
+
+.form_div .card-form form input::-moz-placeholder {
+
+    font-size: 0.9rem;
+    color: hsl(270deg, 3%, 87%);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.form_div .card-form form input:-ms-input-placeholder {
+
+    font-size: 0.9rem;
+    color: hsl(270deg, 3%, 87%);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.form_div .card-form form input::placeholder {
+
+    font-size: 0.9rem;
+    color: hsl(270deg, 3%, 87%);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.form_div .card-form form>div {
+    display: flex;
+}
+
+.form_div .card-form form>div>div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form_div .card-form form>div>div:first-child {
+    margin-right: 0.5rem;
+}
+
+.form_div .card-form form>div>div:first-child div {
+    display: flex;
+}
+
+.form_div .card-form form>div>div:first-child div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_div .card-form form>div>div:first-child div div input {
+    width: 50%;
+    margin-right: 0.5rem;
+}*/
+
+@media (max-width:991px) {
+    .desktop {
+        display: flex;
+        flex-direction: column;
+    }
+}
