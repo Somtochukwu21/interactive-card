@@ -19,7 +19,10 @@ body {
 }
 
 :root {
-    --white: hsl(0deg, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
 }
 
 .cards {
@@ -39,99 +42,85 @@ body {
     box-shadow: 47px 36px 47px -8px rgba(0, 0, 0, 0.1);
 }
 
-.form_div {
-    width: 100%;
+.form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 6rem; */
-    background: mediumaquamarine;
 }
 
-/*
-.form_div .card-form {
-    width: 26.5vw;
+#form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    width: 50%;
 }
 
-.form_div .card-form form {
-    display: flex;
-    flex-direction: column;
+#form label {
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    color: var(--Very-dark-violet);
 }
 
-.form_div .card-form form label {
-    font-size: 0.7rem;
-    padding-bottom: 0.6rem;
-    color: #220930;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.form_div .card-form form input {
-    border: 1px solid hsl(270deg, 3%, 87%);
-    padding: 0.7rem;
-    border-radius: 0.3rem;
-    font-size: 0.9rem;
-
-}
-
-.form_div .card-form form input:hover,
-.form_div .card-form form input:focus-visible {
+#form input[type='text'] {
+    border: 2px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
     outline: none;
-    background: linear-gradient(white, white) padding-box, linear-gradient(160deg, rgb(100, 72, 254) 0%, rgb(96, 5, 148) 100%) border-box;
-    border: 1px solid transparent;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.form_div .card-form form input::-moz-placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
+#form input[type='text']:focus {
+    border: 2px solid #7732A7;
 }
 
-.form_div .card-form form input:-ms-input-placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
+.errorMessage {
+    color: var(--Red);
+    font-size: 12px;
+    margin-top: 2px;
 }
 
-.form_div .card-form form input::placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
-}
-
-.form_div .card-form form>div {
-    display: flex;
-}
-
-.form_div .card-form form>div>div {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.form_div .card-form form>div>div:first-child {
-    margin-right: 0.5rem;
-}
-
-.form_div .card-form form>div>div:first-child div {
-    display: flex;
-}
-
-.form_div .card-form form>div>div:first-child div div {
+.form-boxes {
     display: flex;
     flex-direction: column;
 }
 
-.form_div .card-form form>div>div:first-child div div input {
-    width: 50%;
-    margin-right: 0.5rem;
-}*/
+#form-c2,
+#form-c1 {
+    grid-column: 1/3;
+}
+
+.formboxes-c {
+    display: flex;
+    gap: 1em;
+}
+
+.box6 {
+    grid-column: 1/3;
+}
+
+.box6 input[type="button"] {
+    font-size: 20px;
+    background: var(--Very-dark-violet);
+    border: none;
+    color: var(--White);
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.box6 input[type="button"]:hover {
+    background: var(--Dark-grayish-violet);
+}
 
 @media (max-width:991px) {
     .desktop {

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+.form_div .card-form label {
+    font-size: 0.7rem;
+    padding-bottom: 0.6rem;
+    color: var(--Very-dark-violet);
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.form_div .card-form form input {
+    outline: none;
+    border: 2px solid var(--Light-grayish-violet);
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 16px;
+
+}
+
+.form_div .card-form form input:focus {
+    border-color: var(--Dark-grayish-violet);
+}
+
+
+.form_div .card-form form>div>div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: red;
+}
+ 
+.form_div .card-form form>div {
+    display: flex;
+width: 100%;
+}
+
+
+
+.form_div .card-form form>div>div:first-child {
+    margin-right: 0.5rem;
+}
+
+.form_div .card-form form>div>div:first-child div {
+    display: flex;
+}
+
+.form_div .card-form form>div>div:first-child div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_div .card-form form>div>div:first-child div div input {
+    width: 50%;
+    margin-right: 0.5rem;
+}*/
+    </style>
+  </head>
+  <body>
+    <div class="form_div w-full items-center">
+      <div class="card-form w-[26.5vw]">
+        <form action="" id="desktopform" class="fl ex flex-col hidden">
+          <label for="fname">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <span class="error" id="fnameError"></span>
+
+          <label for="number">CARD NUMBER</label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          />
+          <span class="error" id="numberError"></span>
+
+          <div class=" ">
+            <div>
+              <label for="date">EXP. DATE (MM/YY)</label>
+              <div class="flex w-1/2 bg-black">
+                <input
+                  type="text"
+                  id="MM"
+                  name="date"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <span class="error" id="MMError"></span>
+
+                <input
+                  type="text"
+                  id="YY"
+                  name="date"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+                <span class="error" id="YYError"></span>
+              </div>
+            </div>
+
+            <div>
+              <label for="CVC">CVC</label>
+              <input
+                type="text"
+                id="CVC"
+                name="CVC"
+                placeholder="e.gg 123"
+                maxlength="3"
+              />
+              <span class="error" id="CVCError"></span>
+            </div>
+          </div>
+
+          <input type="button" id="button" name="button" value="Confirm" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -571,6 +571,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
@@ -595,6 +599,14 @@ video {
   width: 370px;
 }
 
+.w-\[26\.5vw\] {
+  width: 26.5vw;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
 .translate-y-3 {
   --tw-translate-y: 0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -606,6 +618,10 @@ video {
 
 .items-end {
   align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-end {
@@ -622,6 +638,15 @@ video {
 
 .gap-\[1em\] {
   gap: 1em;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .pt-4 {
@@ -657,6 +682,10 @@ video {
   letter-spacing: 1.5px;
 }
 
+.outline {
+  outline-style: solid;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -675,7 +704,10 @@ body {
 }
 
 :root {
-  --white: hsl(0deg, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
 }
 
 .cards {
@@ -695,99 +727,85 @@ body {
   box-shadow: 47px 36px 47px -8px rgba(0, 0, 0, 0.1);
 }
 
-.form_div {
-  width: 100%;
+.form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 6rem; */
-  background: mediumaquamarine;
 }
 
-/*
-.form_div .card-form {
-    width: 26.5vw;
+#form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  width: 50%;
 }
 
-.form_div .card-form form {
-    display: flex;
-    flex-direction: column;
+#form label {
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  color: var(--Very-dark-violet);
 }
 
-.form_div .card-form form label {
-    font-size: 0.7rem;
-    padding-bottom: 0.6rem;
-    color: #220930;
-    letter-spacing: 2px;
-    font-weight: bold;
+#form input[type='text'] {
+  border: 2px solid var(--Light-grayish-violet);
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
-.form_div .card-form form input {
-    border: 1px solid hsl(270deg, 3%, 87%);
-    padding: 0.7rem;
-    border-radius: 0.3rem;
-    font-size: 0.9rem;
-
+#form input[type='text']:focus {
+  border: 2px solid #7732A7;
 }
 
-.form_div .card-form form input:hover,
-.form_div .card-form form input:focus-visible {
-    outline: none;
-    background: linear-gradient(white, white) padding-box, linear-gradient(160deg, rgb(100, 72, 254) 0%, rgb(96, 5, 148) 100%) border-box;
-    border: 1px solid transparent;
+.errorMessage {
+  color: var(--Red);
+  font-size: 12px;
+  margin-top: 2px;
 }
 
-.form_div .card-form form input::-moz-placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
+.form-boxes {
+  display: flex;
+  flex-direction: column;
 }
 
-.form_div .card-form form input:-ms-input-placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
+#form-c2,
+#form-c1 {
+  grid-column: 1/3;
 }
 
-.form_div .card-form form input::placeholder {
-
-    font-size: 0.9rem;
-    color: hsl(270deg, 3%, 87%);
-    letter-spacing: 2px;
-    font-weight: 500;
+.formboxes-c {
+  display: flex;
+  gap: 1em;
 }
 
-.form_div .card-form form>div {
-    display: flex;
+.box6 {
+  grid-column: 1/3;
 }
 
-.form_div .card-form form>div>div {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.box6 input[type="button"] {
+  font-size: 20px;
+  background: var(--Very-dark-violet);
+  border: none;
+  color: var(--White);
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-transform: capitalize;
+  width: 100%;
 }
 
-.form_div .card-form form>div>div:first-child {
-    margin-right: 0.5rem;
+.box6 input[type="button"]:hover {
+  background: var(--Dark-grayish-violet);
 }
-
-.form_div .card-form form>div>div:first-child div {
-    display: flex;
-}
-
-.form_div .card-form form>div>div:first-child div div {
-    display: flex;
-    flex-direction: column;
-}
-
-.form_div .card-form form>div>div:first-child div div input {
-    width: 50%;
-    margin-right: 0.5rem;
-}*/
 
 @media (max-width:991px) {
   .desktop {
